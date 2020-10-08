@@ -44,10 +44,7 @@
                 </div>
             </div>
         </header>
-        <div class="bar">
-            <div class="circle"></div>
-            <p>Loading</p>
-        </div>
+
         <!-- About-->
         <section class="about-section text-center" id="about">
             <div class="container">
@@ -219,5 +216,20 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script>
+            $(document).ready(function () {
+                //Preloader
+                preloaderFadeOutTime = 500;
+                function hidePreloader() {
+                    var preloader = $('.spinner-wrapper');
+                    preloader.fadeOut(preloaderFadeOutTime);
+                }
+                hidePreloader();
+            });
+        </script>
     </body>
+    <!--CSS Spinner-->
+    <div class="spinner-wrapper">
+        <div class="spinner"></div>
+    </div>
 </html>

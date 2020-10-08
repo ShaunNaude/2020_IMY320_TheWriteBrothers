@@ -10482,47 +10482,43 @@ body {
   to {opacity: 1}
 }
 
-html, body {
-  background: #347fc3;
-  width: 100%;
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
+.spinner {
+  width: 40px;
+  height: 40px;
+  background-color: #333;
 
-.bar {
-  position: relative;
-  height: 2px;
-  width: 500px;
-  margin: 0 auto;
-  background: #fff;
-  margin-top: 150px;
-}
-
-.circle {
   position: absolute;
-  top: -30px;
-  margin-left: -30px;
-  height: 60px;
-  width: 60px;
-  left: 0;
-  background: #fff;
-  border-radius: 30%;
-  -webkit-animation: move 5s infinite;
+top: 48%;
+left: 48%;
+  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
 }
 
-p {
-  position: absolute;
-  top: -35px;
-  right: -85px;
-  text-transform: uppercase;
-  color: #347fc3;
-  font-family: helvetica, sans-serif;
-  font-weight: bold;
+@-webkit-keyframes sk-rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
 }
 
-@-webkit-keyframes move {
-  0% {left: 0;}
-  50% {left: 100%; -webkit-transform: rotate(450deg); width: 150px; height: 150px;}
-  75% {left: 100%; -webkit-transform: rotate(450deg); width: 150px; height: 150px;}
-  100 {right: 100%;}
+@keyframes sk-rotateplane {
+  0% { 
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
+  } 50% { 
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
+  } 100% { 
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+
+.spinner-wrapper {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #050505;
+z-index: 999999;
 }
