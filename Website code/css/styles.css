@@ -49,6 +49,7 @@
 }
 
 html {
+  cursor: none;
   font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -164,6 +165,7 @@ a {
   color: #01f1a9;
   text-decoration: none;
   background-color: transparent;
+  cursor: none;
 }
 a:hover {
   color: #467370;
@@ -259,9 +261,9 @@ select {
   text-transform: none;
 }
 
-[role=button] {
+/*[role=button] {
   cursor: pointer;
-}
+}*/
 
 select {
   word-wrap: normal;
@@ -278,7 +280,7 @@ button:not(:disabled),
 [type=button]:not(:disabled),
 [type=reset]:not(:disabled),
 [type=submit]:not(:disabled) {
-  cursor: pointer;
+  /*cursor: pointer;*/
 }
 
 button::-moz-focus-inner,
@@ -348,7 +350,7 @@ output {
 
 summary {
   display: list-item;
-  cursor: pointer;
+  /*cursor: pointer;*/
 }
 
 template {
@@ -2484,7 +2486,7 @@ textarea.form-control {
   opacity: 0.65;
 }
 .btn:not(:disabled):not(.disabled) {
-  cursor: pointer;
+  /*cursor: pointer;*/
 }
 a.btn.disabled,
 fieldset:disabled a.btn {
@@ -2492,7 +2494,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-primary {
-  color: #fff;
+  color: black;
   background-color: #01f1a9;
   border-color: #01f1a9;
 }
@@ -3871,7 +3873,7 @@ input[type=button].btn-block {
   width: 100%;
   height: 0.5rem;
   color: transparent;
-  cursor: pointer;
+  /*cursor: pointer;*/
   background-color: #dee2e6;
   border-color: transparent;
   border-radius: 1rem;
@@ -3900,7 +3902,7 @@ input[type=button].btn-block {
   width: 100%;
   height: 0.5rem;
   color: transparent;
-  cursor: pointer;
+  /*cursor: pointer;*/
   background-color: #dee2e6;
   border-color: transparent;
   border-radius: 1rem;
@@ -3931,7 +3933,7 @@ input[type=button].btn-block {
   width: 100%;
   height: 0.5rem;
   color: transparent;
-  cursor: pointer;
+  /*cursor: pointer;*/
   background-color: transparent;
   border-color: transparent;
   border-width: 0.5rem;
@@ -3949,13 +3951,13 @@ input[type=button].btn-block {
   background-color: #adb5bd;
 }
 .custom-range:disabled::-webkit-slider-runnable-track {
-  cursor: default;
+  /*cursor: default;*/
 }
 .custom-range:disabled::-moz-range-thumb {
   background-color: #adb5bd;
 }
 .custom-range:disabled::-moz-range-track {
-  cursor: default;
+  /*cursor: default;*/
 }
 .custom-range:disabled::-ms-thumb {
   background-color: #adb5bd;
@@ -3992,7 +3994,7 @@ input[type=button].btn-block {
 .nav-link.disabled {
   color: #6c757d;
   pointer-events: none;
-  cursor: default;
+  /*cursor: default;*/
 }
 
 .nav-tabs {
@@ -4711,7 +4713,7 @@ input[type=button].btn-block {
 .page-item.disabled .page-link {
   color: #6c757d;
   pointer-events: none;
-  cursor: auto;
+  /*cursor: auto;*/
   background-color: #fff;
   border-color: #dee2e6;
 }
@@ -6092,7 +6094,7 @@ a.close.disabled {
   margin-right: 3px;
   margin-left: 3px;
   text-indent: -999px;
-  cursor: pointer;
+  /*cursor: pointer;*/
   background-color: #fff;
   background-clip: padding-box;
   border-top: 10px solid transparent;
@@ -10376,7 +10378,7 @@ body {
 }
 
 #gifs-rows img {
-  cursor: pointer;
+  /*cursor: pointer;*/
 }
 #gifs-rows .activef {
   max-width: 100%;
@@ -10400,7 +10402,7 @@ body {
 
 /* Next & previous buttons */
 .prev, .next {
-  cursor: pointer;
+  /*cursor: pointer;*/
   position: absolute;
   top: 50%;
   width: auto;
@@ -10450,7 +10452,7 @@ body {
 
 /* The dots/bullets/indicators */
 .dot {
-  cursor: pointer;
+  /*cursor: pointer;*/
   height: 15px;
   width: 15px;
   margin: 0 2px;
@@ -10521,4 +10523,35 @@ right: 0;
 bottom: 0;
 background-color: #050505;
 z-index: 999999;
+}
+
+/*pointer cursor stuff*/
+#pointer-dot {
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border: 2.5px solid white;
+    position: fixed;
+    border-radius: 4px;
+    z-index: 9999;
+    pointer-events: none;
+    transition: border-color 0.5s;
+}
+
+#pointer-ring {
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    padding: 15px;
+    border: 2px solid #00ffb2;
+    position: fixed;
+    border-radius: 100px;
+    z-index: 99999;
+    pointer-events: none;
+}
+
+iframe {
+  cursor: none;
 }
