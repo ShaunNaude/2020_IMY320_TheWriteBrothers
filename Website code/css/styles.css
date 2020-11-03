@@ -4414,10 +4414,10 @@ input[type=button].btn-block {
   color: rgba(255, 255, 255, 0.5);
 }
 .navbar-dark .navbar-text a {
-  color: #fff;
+  color: rgb(49, 46, 46);;
 }
 .navbar-dark .navbar-text a:hover, .navbar-dark .navbar-text a:focus {
-  color: #fff;
+  color: rgb(49, 46, 46);
 }
 
 .card {
@@ -10162,7 +10162,7 @@ body {
   padding: 0.9rem 0;
 }
 #mainNav .navbar-nav .nav-item:hover {
-  color: fade(#fff, 80%);
+  color: fade(rgb(29, 26, 26), 80%);
   outline: none;
   background-color: transparent;
 }
