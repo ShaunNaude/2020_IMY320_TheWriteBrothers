@@ -84,3 +84,18 @@ $("img", "#gifs-rows").hover(function () {
     $('.static').toggle();
     $('.activef').toggle();
 });
+
+var curYPos = 0;
+var curXPos = 0;
+var curDown = false;
+
+$(document).on("mousemove", function (event) {
+    if (curDown === true) {
+        $(document).scrollTop(parseInt($(document).scrollTop() + (curYPos - event.pageY)));
+        $(document).scrollLeft(parseInt($(document).scrollLeft() + (curXPos - event.pageX)));
+    }
+});
+
+$(document).on("mousedown", function (e) { curDown = true; curYPos = e.pageY; curXPos = e.pageX; e.preventDefault(); });
+$(window).on("mouseup", function (e) { curDown = false; });
+$(window).on("mouseout", function (e) { curDown = false; });
